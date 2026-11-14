@@ -7,10 +7,10 @@
   <meta name="description" content="활자랩(Hwalja Lab)은 사람의 언어와 AI의 실행력을 잇는 제품을 만드는 Human–AI 인터페이스 스튜디오입니다. 제품 기획, AI 자동화, 웹·서비스 개발.">
   <link rel="canonical" href="https://hwaljalab.com/">
 
-  <link rel="icon" href="/hwaljalab-site/favicon.ico" sizes="32x32">
-  <link rel="icon" href="/hwaljalab-site/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/hwaljalab-site/apple-touch-icon.png">
-  <link rel="manifest" href="/hwaljalab-site/site.webmanifest">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#F7F5EF">
 
   <meta property="og:type" content="website">
@@ -41,8 +41,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500&display=swap">
   <script>document.documentElement.classList.add('js');</script>
-  <script type="module" crossorigin src="/hwaljalab-site/assets/main-Cv2jM9eu.js"></script>
-  <link rel="stylesheet" crossorigin href="/hwaljalab-site/assets/styles-CL9jOYnb.css">
+  <script type="module" crossorigin src="/assets/main-Cv2jM9eu.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/styles-CL9jOYnb.css">
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 바로 가기</a>
@@ -241,7 +241,9 @@
           <p class="section-intro">사업 제휴, 데모 문의, 제품 개발 상담을 남겨 주세요. 보내기를 누르면 메일 앱이 열리고 입력한 내용이 메일로 정리됩니다.</p>
         </div>
         <div class="section-body contact">
-          <form class="form" id="contact-form" action="mailto:contact@hwaljalab.com" method="post" enctype="text/plain" novalidate>
+          <!-- 보내기는 contact-form.js가 mailto로 연다. action="mailto:"는 HTTPS에서 혼합 콘텐츠로 잡히므로 쓰지 않고,
+               JS가 없을 때 입력값이 주소로 새지 않게 method="dialog"(대화 상자 밖에서는 제출하지 않음)로 둔다 -->
+          <form class="form" id="contact-form" method="dialog" novalidate>
             <div class="field">
               <label class="field__label" for="contact-name">이름</label>
               <input class="field__input" id="contact-name" type="text" name="name" autocomplete="name" required>
@@ -293,7 +295,7 @@
     <div class="wrap">
       <div class="site-footer__top">
         <div class="site-footer__brand">
-          <img src="/hwaljalab-site/assets/hwalja-lab-horizontal-bilingual-reverse-DCYWCmss.svg" alt="활자랩" width="136" height="48">
+          <img src="/assets/hwalja-lab-horizontal-bilingual-reverse-DCYWCmss.svg" alt="활자랩" width="136" height="48">
           <p class="site-footer__slogan" lang="en">Living Type for Human–AI Interfaces</p>
         </div>
         <div class="site-footer__group">
